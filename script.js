@@ -1,12 +1,7 @@
-let x = prompt("What is you name?");
-let y = prompt("What are you interested?");
-let z = prompt("How old are you?");
-let w = prompt("Are you married?");
+var str = prompt("When have you born,as show example 30.06.1993"); 
 
-let answer = [];
-answer[0] = x ;
-answer[1] = y ;
-answer[2] = z ;
-answer[3] = w ;
+var birthDate = new Date(str.replace(/^(\d+)\.(\d+).(\d+)$/, "$3-$2-$1"));
+ 
+var currentDate = new Date();  
 
-console.log(answer);
+ alert( Math.floor( (currentDate - birthDate) / 1000 / 60 / 60 / 24)+" "+ "days" ); 
